@@ -64,16 +64,16 @@ function statSummary(stat) {
         upvoteRatio.push({username,ratio:upvoteRatioItem});
 
         let downvoteRatioItem = 1;
-        if(downvotesReceivedItem === 0) {
-            downvoteRatioItem = downvotesGivenItem;
+        if(downvotesGivenItem === 0) {
+            downvoteRatioItem = downvotesReceivedItem;
         } else {
-            downvoteRatioItem = downvotesGivenItem / downvotesReceivedItem;
+            downvoteRatioItem = downvotesReceivedItem / downvotesGivenItem;
         }
         downvoteRatioItem = Math.round(downvoteRatioItem * 100) / 100;
         downvoteRatio.push({username,ratio:downvoteRatioItem});
 
         let chudRatioItem = 1;
-        if(chudsReceivedItem === 0) {
+        if(chudsGivenItem === 0) {
             chudRatioItem = chudsReceivedItem;
         } else {
             chudRatioItem = chudsReceivedItem / chudsGivenItem;
